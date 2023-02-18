@@ -6,7 +6,7 @@ const cohere = require("cohere-ai");
 
 cohere.init(process.env.key);
 router.get("/", async function (req, res) {
-  const name = req.query.name;
+  const desc = req.query.desc;
   const options = {
     method: "POST",
     url: "https://api.cohere.ai/generate",
@@ -17,11 +17,11 @@ router.get("/", async function (req, res) {
       authorization: `Bearer ${process.env.COHERE_API_KEY}`,
     },
     data: {
-      max_tokens: 300,
+      max_tokens: 150,
       model: "command-xlarge-nightly",
       return_likelihoods: "NONE",
       truncate: "END",
-      prompt: `Generate a mesmerizing project description on ${name} to get a brief idea of the project working in about 80-100 words`,
+      prompt: `Generate atleast five 2-3 words catchy title for the project description: ${desc}`,
       num_results: 10,
     },
   };
