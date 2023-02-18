@@ -10,6 +10,7 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+
 app.use("/projectIdeas", projectIdeas);
 app.use("/projectIdea", projectIdea);
 app.use("/projectDescription", projectDescription);

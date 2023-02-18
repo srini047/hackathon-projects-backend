@@ -30,7 +30,7 @@ router.get("/", async function (req, res) {
     .request(options)
     .then(function (response) {
       console.log(response.data);
-      res.send({ description: response.data.generations.text });
+      res.send({ description: response.data});
     })
     .catch(function (error) {
       console.error(error);
