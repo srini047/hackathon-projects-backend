@@ -1,4 +1,4 @@
-require('dotenv').config()
+require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
@@ -10,6 +10,7 @@ router.get("/", async function (req, res) {
     method: "POST",
     url: "https://api.cohere.ai/generate",
     headers: {
+      "Access-Control-Allow-Origin": "http://localhost:8000/",
       accept: "application/json",
       "Cohere-Version": "2022-12-06",
       "content-type": "application/json",
@@ -21,7 +22,7 @@ router.get("/", async function (req, res) {
       return_likelihoods: "NONE",
       truncate: "END",
       prompt: `Give 10 project ideas for hackathons for participants of all levels ranging from beginners to advanced`,
-      num_results: 10
+      num_results: 10,
     },
   };
 
@@ -29,7 +30,7 @@ router.get("/", async function (req, res) {
     .request(options)
     .then(function (response) {
       console.log(response.data);
-      res.send({ description: response.data });
+      res.send({ description: response.data.generations[0].text });
     })
     .catch(function (error) {
       console.error(error);
