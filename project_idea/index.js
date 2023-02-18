@@ -6,7 +6,7 @@ const cohere = require("cohere-ai");
 
 cohere.init(process.env.key);
 router.get("/", async function (req, res) {
-  const topic = req.query.topic;
+  const topic = req.query.topic || "general";
   const options = {
     method: "POST",
     url: "https://api.cohere.ai/generate",
