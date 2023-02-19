@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# HackProInit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- Insert thumbnail here -->
 
-## Available Scripts
+## Video Demo
 
-In the project directory, you can run:
+<!-- Insert file here directly -->
 
-### `npm start`
+*Submitted to [MLH Workathon](https://work-a-thon.devpost.com)*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Elevator Pitch
+**A one-stop platform to help build your next hackathon project**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Landing Page
 
-### `npm test`
+Gives a clear overview of the project built and its functionalities using Ant design.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[URL](https://github.com/srini047/hackathon-projects-landing)
 
-### `npm run build`
+## Backend🔙
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[URL](https://github.com/srini047/hackathon-projects-backend)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Endpoints
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Project idea generator (genreric)
+Made use of Cohere (Genreate)
 
-### `npm run eject`
+- /projectIdeas ✅
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Project idea generator (specific)
+Made use of Cohere (Genreate with constraints)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- /projectIdea`?topic=""` ✅
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Project description generator
+Made use of Cohere (Genreate)
+- /projectDescription`?name=""` ✅
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Project title generator
+Made use of Cohere (Genreate)
 
-## Learn More
+- /projectTitle`?desc=""` ✅
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Project comparsion (P1 vs P2)
+Made use of Cohere (Genreate / Classify)
+- /projectCompare`? ❌
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Project implementation
+Made use of OpenAI API
+- /projectImplement`?name=""` { Need some more working and fine tuning... } ❌
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Frontend➬
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[URL](https://github.com/srini047/hackathon-projects-frontend)
 
-### Making a Progressive Web App
+### Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Get Ideas
+- `/ideas` ✅
 
-### Advanced Configuration
+#### Get Ideas
+- `/idea` ✅
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### Get Ideas
+- `/description` ✅
 
-### Deployment
+#### Get Ideas
+- `/title` ✅
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Get Ideas
+- `/compare` ❌
 
-### `npm run build` fails to minify
+#### Get Ideas
+- /projectImplement`?name=""` { Need some more working and fine tuning... } ❗️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Authentication
+- Using Twilio Verify (to be integrated)
+
+## Inspiration
+*When I decided to participate in Work-a-thon, initially nothing struck my mind interesting. So I felt many others would once in a while be in such a situation. Hence, I decided to build my own Hackathon project initiator that provides the initial breakthrough kickstart your project.*
+
+## What it does
+As the title suggests, `Hack => Hackathon` & `Pro => Project` & `Init => Initializer` means it acts as a platform to generate project **Ideas, Description, Title**. These are the bare minimum requirements for any hackathon project submission including devpost. 
+
+## How we built it
+- Cohere (Generate project title, description, comparison)
+- Twilio Verify (Authentication)
+- GitHub (Most obvious)
+- OpenAI (Generate project implementation)
+- GoDaddy Registry (Domain)
+- React.js (Frontend)
+- Node.js (Backend)
+- Ant Design & Bootstrap (CSS)
+
+## Challenges we ran into
+- While building the backend, get the response in the desired format `JSON` and truncate unwanted stuff.
+- After fetching the data from the server and overcoming the CORS error was very hectic and the most time-consuming. I tried all the stuff google, StackOverflow, chatGPT, etc. at last a basic `CORS Unblocked` chrome extension came to the rescue.
+- Building a Landing was something important as most of us don't give much attention to it. Hence I spent some time building it and faced lots of issues while building. Finally, thanks to AntD that came to the revival.
+
+## Accomplishments that we're proud of
+- How to query the prompt or interpret the NLP models to get the best possible results possible.
+- Overcoming the CORS error while fetching the data from the server was like getting a college degree I felt like floating in the air.
+- Then building a response UI was something cool in a short span of time.
+- A desperate, responsive landing page to showcase every bit of my Project was a nice thing.
+
+## What we learned
+- First of all, never hack alone since I had a long break with hackathons and thought of working solo but never going to attempt it.
+- Dealing with CORS and how to break down the errors to get the right solution.
+
+## What's next for HackProInit
+- Integrate Authentication (the code exists)
+- Work on tech stack thing for project implementation.
+- Also provide a comparison of projects while choosing the best out of the two.
