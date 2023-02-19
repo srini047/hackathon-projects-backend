@@ -11,28 +11,28 @@ router.get("/", async function (req, res) {
   const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
   });
-  const openai = new OpenAIApi(configuration);
-//   const options = {
-//     method: "POST",
-//     url: "https://api.opeanai.com/v1/completions",
-//     headers: {
-//       accept: "application/json",
-//       "content-type": "application/json",
-//       authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-//     },
-//     data: {
-//       max_tokens: 256,
-//       model: "text-davinci-003",
-//       prompt: `Give me the tech stack on how to work on the project description: ${desc}`,
-//       temperature: 0
-//     },
-//   };
-  const options = await openai.createCompletion({
-    model: "text-davinci-003",
-    prompt: `Give me the tech stack on how to work on the project description: ${desc}`,
-    max_tokens: 7,
-    temperature: 0,
-  });
+  // const openai = new OpenAIApi(configuration);
+  const options = {
+    method: "POST",
+    url: "https://api.opeanai.com/v1/completions",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+    },
+    data: {
+      max_tokens: 256,
+      model: "text-davinci-003",
+      prompt: `Give me the tech stack on how to work on the project description: ${desc}`,
+      temperature: 0
+    },
+  };
+  // const options = await openai.createCompletion({
+  //   model: "text-davinci-003",
+  //   prompt: `Give me the tech stack on how to work on the project description: ${desc}`,
+  //   max_tokens: 7,
+  //   temperature: 0,
+  // });
 
   axios
     .request(options)
