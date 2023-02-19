@@ -1,10 +1,10 @@
 # HackProInit
 
-<!-- Insert thumbnail here -->
+![HackProInit-Thumbnail](https://user-images.githubusercontent.com/81156510/219946458-0481d137-1111-4f67-bd74-59263958abf8.png)
 
 ## Video Demo
 
-<!-- Insert file here directly -->
+[HackProInit-Demo](https://youtu.be/-8w_8LFkrEA "Youtube")
 
 *Submitted to [MLH Workathon](https://work-a-thon.devpost.com)*
 
