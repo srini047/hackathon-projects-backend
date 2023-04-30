@@ -1,10 +1,10 @@
 require("dotenv").config();
 const express = require("express");
-const projectIdeas = require("./project_ideas");
-const projectIdea = require("./project_idea");
-const projectDescription = require("./project_description");
-const projectTitle = require("./project_title");
-const projectImplement = require("./project_implement");
+const projectIdeas = require("../project_ideas");
+const projectIdea = require("../project_idea");
+const projectDescription = require("../project_description");
+const projectTitle = require("../project_title");
+const projectImplement = require("../project_implement");
 
 const app = express();
 const port = 4000;
