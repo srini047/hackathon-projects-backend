@@ -1,12 +1,21 @@
 # HackProInit
 
-<!-- Insert thumbnail here -->
+![HackProInit-Thumbnail](https://user-images.githubusercontent.com/81156510/219946458-0481d137-1111-4f67-bd74-59263958abf8.png)
 
 ## Video Demo
 
-<!-- Insert file here directly -->
+[HackProInit-Demo](https://youtu.be/-8w_8LFkrEA "Youtube")
 
 *Submitted to [MLH Workathon](https://work-a-thon.devpost.com)*
+
+## Image carousel (Screenshots)
+<img width="1800" alt="Screenshot 2023-02-19 at 4 49 12 PM" src="https://user-images.githubusercontent.com/81156510/219947072-1e3dac68-5d6b-4a93-8316-adc9c73a118b.png">
+<img width="1800" alt="Screenshot 2023-02-19 at 4 59 11 PM" src="https://user-images.githubusercontent.com/81156510/219947084-63e8f624-a3a3-48c3-8caa-42cbfca8d374.png">
+<img width="1800" alt="Screenshot 2023-02-19 at 4 59 22 PM" src="https://user-images.githubusercontent.com/81156510/219947086-3012dc17-6bc1-4b83-bd41-940afa092a5c.png">
+<img width="1800" alt="Screenshot 2023-02-19 at 5 01 07 PM" src="https://user-images.githubusercontent.com/81156510/219947091-db373c19-1c12-4bf1-ac24-ae4912ff2b44.png">
+<img width="1800" alt="Screenshot 2023-02-19 at 5 01 29 PM" src="https://user-images.githubusercontent.com/81156510/219947092-a28ef734-a984-41ae-a6c8-af3476863467.png">
+<img width="1800" alt="Screenshot 2023-02-19 at 5 01 52 PM" src="https://user-images.githubusercontent.com/81156510/219947094-18728436-3868-4420-9cc5-3704b9729a78.png">
+
 
 ## Elevator Pitch
 **A one-stop platform to help build your next hackathon project**
